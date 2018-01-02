@@ -11,20 +11,27 @@ before_action :get_post, only: [:show, :update, :destroy]
     @post
   end
 
+  def new
+    @post = Post.new
+  end
+
   def create
-    if @user.admin
+    # if @user.admin
       post = Post.new(post_parmas)
 
       if post.save
-        # show success message?
-        # maybe go to the post?
+        # show success message and redirect to the newly created post page
+        flash[:notice] = "Successfully created post!"
+        redirect_to blog_post(post)
       else
-        # show error that post did not save
+        # show error that post did not save and redirect back to new form.
+        flash[:alert] = "Error creating new post!"
+        render :new
       end
 
-    else 
+    # else 
       # show unauthorized error 
-    end
+    # end
   end
 
   private

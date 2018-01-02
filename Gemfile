@@ -9,6 +9,8 @@ end
 gem 'dotenv-rails'
 # Use simple_form for my forms for handling inputs
 gem 'simple_form'
+# Used for great and wonderful WYSIWYG editor
+gem 'ckeditor'
 # Used for delightful styling
 gem 'jquery-rails'
 gem 'bootstrap-sass'
