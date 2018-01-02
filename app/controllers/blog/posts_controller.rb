@@ -17,12 +17,12 @@ before_action :get_post, only: [:show, :update, :destroy]
 
   def create
     # if @user.admin
-      post = Post.new(post_parmas)
+      post = Post.new(post_params)
 
       if post.save
         # show success message and redirect to the newly created post page
-        flash[:notice] = "Successfully created post!"
-        redirect_to blog_post(post)
+        flash[:success] = "Successfully created post!"
+        redirect_to blog_post_path(post)
       else
         # show error that post did not save and redirect back to new form.
         flash[:alert] = "Error creating new post!"
@@ -41,7 +41,7 @@ before_action :get_post, only: [:show, :update, :destroy]
   end
 
   def post_params
-    parms.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body)
   end
 
 end

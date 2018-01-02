@@ -1,6 +1,9 @@
 <div class="container">
   <h2 class="text-center">Create New Post</h2>
 
+  <% if flash[:alert] %>
+    <div class="error-alert"><%= flash[:alert] %>
+  <% end %>
   <%= render "blog/posts/form" %>
 
 </div>

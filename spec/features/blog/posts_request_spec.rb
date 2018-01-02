@@ -38,4 +38,22 @@ RSpec.describe "Posts", Type: :feature do
     end 
   end
 
+  describe "POST blog/post/new" do
+
+    it "let's a new post be created from the form" do
+
+      visit '/blog/posts/new'
+
+      within("#new_post") do
+        fill_in 'post_title', with: "Another title to a post"
+        fill_in 'post_body', with: "The body of the post"
+      end
+
+      click_button 'Create Post'
+      expect(page).to have_content "Successfully created post!"
+      expect(page).to have_content "Another title to a post"
+      expect(page).to have_content "The body of the post"
+    end
+  end
+
 end
