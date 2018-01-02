@@ -10,10 +10,10 @@ RSpec.describe "Posts", Type: :feature do
     @comment1 = create(:comment, body: "This is another comment on a great post", post_id: @post.id)
   end
 
-  describe "GET /posts" do
+  describe "GET blog/posts" do
 
     it "shows all posts on the page" do
-      visit '/posts'
+      visit 'blog/posts'
       
       expect(page).to have_content @post.title
       expect(page).to have_content @post.body
@@ -24,10 +24,10 @@ RSpec.describe "Posts", Type: :feature do
     end
   end
 
-  describe "GET /post/:id" do
+  describe "GET blog/post/:id" do
   
     it "shows the content of only the post whose id is in the path" do
-      visit "/posts/#{@post.id}"
+      visit "blog/posts/#{@post.id}"
 
       expect(page).to_not have_content @post1.title
       expect(page).to_not have_content @post1.body
