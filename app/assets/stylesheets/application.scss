@@ -52,3 +52,25 @@
   li.group-label {
     padding-left: 10px;
   }
+
+  // footer settings
+  footer {
+    clear: both;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 40px;
+    color: $primary-red;
+  }
+
+  footer {
+    .container-fluid {
+      background-color: #ccc;
+    }
+  }
+
+  footer {
+    p {
+      padding-top: 8px;
+      font-weight: 600;
+    }
+  }
