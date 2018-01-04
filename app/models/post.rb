@@ -6,7 +6,10 @@ class Post < ApplicationRecord
   validates :title, :body, :user_id, presence: true
 
   before_validation do
-    if !title.nil?
+    if !self.title.nil?
+      # strip any punctuation off the end of the title
+
+      # strip off any whitespace and downcase the slug and replace any spaces with '-'
       self.title = title.strip()
       self.slug = self.title.downcase.gsub(" ", "-")
     end
