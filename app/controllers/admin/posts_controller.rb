@@ -1,7 +1,5 @@
 class Blog::PostsController < ApplicationController
-before_action :get_post, only: [:show, :update, :destroy]
-# need to implement JWT for admin side to make sure updating posts is done only by those authorized
-# before_action :authenticate_token!, only: [:create, :update, :destory]
+before_action :get_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.all

@@ -16,8 +16,7 @@ gem 'mini_magick'
 # Used for delightful styling
 gem 'jquery-rails'
 gem 'bootstrap-sass'
-# Use JWT for token authentication
-gem 'jwt'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
