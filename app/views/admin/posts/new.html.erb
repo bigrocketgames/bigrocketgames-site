@@ -3,11 +3,12 @@
 </div>
 
 <div class="main-admin-content">
-  <h2 class="text-center">Create New Post</h2>
+  <div class="container">
+    <h2 class="text-center">Create New Post</h2>
 
-  <% if flash[:alert] %>
-    <div class="error-alert"><%= flash[:alert] %>
-  <% end %>
-  <%= render "admin/posts/form" %>
-
+    <% if flash[:alert] %>
+      <div class="error-alert"><%= flash[:alert] %>
+    <% end %>
+    <%= render "admin/posts/form" %>
+  </div>
 </div>
