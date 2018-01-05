@@ -1,4 +1,4 @@
-class Blog::PostsController < ApplicationController
+class Admin::PostsController < ApplicationController
 before_action :get_post, only: [:show, :edit, :update, :destroy]
 
   def index
