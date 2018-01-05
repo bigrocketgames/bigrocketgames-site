@@ -74,3 +74,29 @@
       font-weight: 600;
     }
   }
+
+  // Admin pages
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    bottom: 0px;
+    width: 15%;
+    padding: 10px;
+    margin-top: -10px;
+    background-color: black;
+  }
+
+  .main-admin-content {
+    width: 85%;
+    margin-top: -10px;
+    float: right;
+    background-color: blue;
+    padding: 15px;
+  }
+
+  .admin-link {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: block;
+  }
