@@ -28,7 +28,7 @@ RSpec.describe "Posts", Type: :feature do
   describe "GET blog/post/:id" do
   
     it "shows the content of only the post whose id is in the path" do
-      visit "blog/posts/#{@post.id}"
+      visit "blog/posts/#{@post.slug}"
 
       expect(page).to_not have_content @post1.title
       expect(page).to_not have_content @post1.body
