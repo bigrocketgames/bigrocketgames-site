@@ -23,5 +23,7 @@ Rails.application.routes.draw do
     resources :mobile_games, only: [:show]
     resources :browser_games, only: [:show]
   end
+
+  resources :portfolio, only: [:index, :show]
   
 end
