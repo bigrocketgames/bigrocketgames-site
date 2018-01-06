@@ -27,6 +27,7 @@
 //  navbar settings
   .navbar-fixed-top {
     background-color: #ccc;
+    border: none;
   }
 
   .navbar-default a.navbar-brand, .navbar-default a.navbar-brand:hover {
@@ -95,7 +96,9 @@
     width: 15%;
     padding: 10px;
     margin-top: -10px;
-    background-color: black;
+    background-color: #ccc;
+    border: solid #fff;
+    border-width: 5px 5px 5px 0;
   }
 
   .main-admin-content {
