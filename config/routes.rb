@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     resources :posts
     resources :mobile_games
     resources :browser_games
+    resources :portfolio
   end
 
   namespace :games do
