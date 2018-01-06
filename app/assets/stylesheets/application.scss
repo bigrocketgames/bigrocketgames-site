@@ -42,10 +42,8 @@
   }
 
   .navbar-nav {
-    li.active {
-      a {
+    li.active > a {
         background-color: $primary-red !important;
-      }
     }
   }
 
