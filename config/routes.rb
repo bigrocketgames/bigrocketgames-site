@@ -15,6 +15,13 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'admin#home', as: 'home'
     resources :posts
+    resources :mobile_games
+    resources :browser_games
+  end
+
+  namespace :games do
+    resources :mobile_games, only: [:show]
+    resources :browser_games, only: [:show]
   end
   
 end
