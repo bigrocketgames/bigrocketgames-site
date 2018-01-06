@@ -75,6 +75,19 @@
     }
   }
 
+  // Body settings
+  Body {
+    background: url("/uploads/images/content_rocket_on_road.jpg") center center no-repeat fixed;
+    background-size: cover;
+}
+
+  // Main Logo settings for size
+    .main-logo {
+      width: 400px;
+      display: block;
+      margin: auto;
+    }
+
   // Admin pages
   .sidebar {
     position: fixed;
