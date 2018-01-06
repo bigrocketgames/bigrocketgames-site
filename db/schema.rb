@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20180106033921) do
   create_table "browser_games", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.text "gameFeatures"
+    t.text "instructions"
     t.text "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
