@@ -1,5 +1,11 @@
-<div>
+<div class="admin-menu">
   <%= link_to 'Admin Home', admin_home_path, class: "admin-link" %>
   <%= link_to 'View Posts List', admin_posts_path, class: "admin-link" %>
   <%= link_to 'Add New Post', new_admin_post_path, class: "admin-link" %>
+  <%= link_to 'View Mobile Games List', admin_mobile_games_path, class: "admin-link" %>
+  <%= link_to 'Add New Mobile Game', new_admin_mobile_game_path, class: "admin-link" %>
+  <%= link_to 'View Browser Games List', admin_browser_games_path, class: "admin-link" %>
+  <%= link_to 'Add New Browser Game', new_admin_browser_game_path, class: "admin-link" %>
+
+  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "admin-signout-link" %>
 </div>

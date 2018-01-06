@@ -30,6 +30,16 @@
     border: none;
   }
 
+  .navbar-brand {
+    padding: 0;
+    width: 120px;
+  }
+
+  .navbar-brand > .navbar-brand {
+    margin-left: 0px !important;
+    padding: 5px;
+  }
+
   .navbar-default a.navbar-brand, .navbar-default a.navbar-brand:hover {
     color: $black-text;
   }
@@ -93,7 +103,8 @@
     left: 0;
     top: 60px;
     bottom: 40px;
-    width: 15%;
+    min-width: 200px;
+    max-width: 300px;
     padding: 10px;
     margin-top: -10px;
     background-color: #ccc;
@@ -102,16 +113,29 @@
   }
 
   .main-admin-content {
-    width: 85%;
+    width: 80%;
     margin-top: -10px;
     margin-bottom: 40px;
     float: right;
-    background-color: blue;
     padding: 15px;
   }
 
+  .admin-container {
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .admin-link {
+    color: black;
     margin-top: 5px;
     margin-bottom: 5px;
     display: block;
+  }
+
+  .admin-signout-link {
+    color: black;
+    position: fixed;
+    bottom: 60px;
   }
