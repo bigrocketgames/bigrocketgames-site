@@ -1,0 +1,6 @@
+<tr>
+  <td><%= portfolio.id %></td>
+  <td><%= portfolio.title %></td>
+  <td><%= link_to 'Edit Portfolio Site', edit_admin_portfolio_path(portfolio.id), class: "admin-table-link" %> </td>
+  <td><%= link_to 'Delete Portfolio Site', admin_portfolio_path(portfolio.id), method: :Delete, class: "admin-table-link" %></td>
+</tr>
