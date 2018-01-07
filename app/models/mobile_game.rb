@@ -1,4 +1,6 @@
 class MobileGame < ApplicationRecord
+  mount_uploaders :sliderImages, ImageUploader
+
   validates :title, uniqueness: true
   validates :title, :description, :gameFeatures, presence: true
   
