@@ -82,9 +82,22 @@
   // Body settings
   Body {
     padding-top: 60px;
+  }
+
+  Body.main {
+    background: url("/uploads/images/content_sky-383823_1920.jpg") center center no-repeat fixed;
+    background-size: cover;
+  }
+
+  Body.home {
     background: url("/uploads/images/content_rocket_on_road.jpg") center center no-repeat fixed;
     background-size: cover;
-}
+  }
+
+  Body.admin {
+    background: url("/uploads/images/content_milky-way-2695569_1920.jpg") center center no-repeat fixed;
+    background-size: cover;
+  }
 
   // Main Logo settings for size
     .main-logo {
