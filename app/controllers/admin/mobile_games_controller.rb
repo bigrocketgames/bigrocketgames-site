@@ -1,4 +1,5 @@
 class Admin::MobileGamesController < ApplicationController
+  layout "admin"
 
   def index
   end

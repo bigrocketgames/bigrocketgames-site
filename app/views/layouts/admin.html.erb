@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BigRocketGames</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="admin">
+    <%= render "layouts/navigation/navbar" %>
+    <div class="sidebar">
+      <%= render "layouts/navigation/sidemenu" %>
+    </div>
+    
+    <%= yield %>
+  </body>
+
+  <footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <p>Big Rocket Games LLC Copyright &copy; 2015-2018.  All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+</html>

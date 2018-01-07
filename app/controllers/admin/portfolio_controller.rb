@@ -1,4 +1,5 @@
 class Admin::PortfolioController < ApplicationController
+  layout "admin"
 
   def index
     @portfolios = Portfolio.all

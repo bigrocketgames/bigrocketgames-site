@@ -1,5 +1,6 @@
 class Admin::PostsController < ApplicationController
-before_action :get_post, only: [:show, :edit, :update, :destroy]
+  layout "admin"
+  before_action :get_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.all
