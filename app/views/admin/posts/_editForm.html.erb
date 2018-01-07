@@ -1,4 +1,4 @@
-<%= simple_form_for @post, url: blog_posts_path, method: :post do |f| %>
+<%= simple_form_for @post, url: admin_post_path, method: :put do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2>

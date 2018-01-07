@@ -3,7 +3,7 @@ class Admin::PostsController < ApplicationController
   before_action :get_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order(:id)
   end
 
   def show
@@ -21,7 +21,7 @@ class Admin::PostsController < ApplicationController
       if post.save
         # show success message and redirect to the newly created post page
         flash[:success] = "Successfully created post!"
-        redirect_to blog_post_path(post)
+        redirect_to admin_posts_path
       else
         # show error that post did not save and redirect back to new form.
         flash[:alert] = "Error creating new post!"
@@ -31,6 +31,33 @@ class Admin::PostsController < ApplicationController
     # else 
       # show unauthorized error 
     # end
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      # show success message and redirect to the newly created post page
+      flash[:success] = "Successfully updated post!"
+      redirect_to admin_posts_path
+    else
+      # show error that post did not save and redirect back to new form.
+      flash[:alert] = "Error updating post!"
+      render :edit
+    end
+  end
+
+  def destroy
+    if @post.destroy
+      # show success message and redirect to the admin posts page
+      flash[:success] = "Successfully deleted post!"
+      redirect_to admin_posts_path
+    else
+      # show error that post did not delete.
+      flash[:alert] = "Error deleting post!"
+      redirect_to admin_posts_path
+    end
   end
 
   private
