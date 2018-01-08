@@ -1,0 +1,10 @@
+<div class="main-admin-content">
+  <div class="admin-container">
+    <h2 class="text-center admin-page-header">Edit Mobile Game</h2>
+
+    <% if flash[:alert] %>
+      <div class="error-alert"><%= flash[:alert] %>
+    <% end %>
+    <%= render "admin/mobile_games/editForm" %>
+  </div>
+</div>
