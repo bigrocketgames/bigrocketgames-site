@@ -1,5 +1,15 @@
 <div class="main-admin-content">
   <div class="admin-container">
+    <% # display the flash messages if there are any. %>
+    <% if flash[:success] %>
+      <% flash.each do |key, value| %>
+      <div class="<%= flash_class(key) %>"><%= value %></div>
+      <% end %>
+    <% end %>
+
+    <h2 class="text-center admin-page-header">
+      PORTFOLIO
+    </h2> 
     <table class="table table-striped table-bordered table-condensed">
       <thead>
         <td>#</td>
