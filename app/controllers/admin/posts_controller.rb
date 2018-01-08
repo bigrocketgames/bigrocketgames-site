@@ -1,13 +1,9 @@
 class Admin::PostsController < ApplicationController
   layout "admin"
-  before_action :get_post, only: [:show, :edit, :update, :destroy]
+  before_action :get_post, only: [ :edit, :update, :destroy]
 
   def index
     @posts = Post.all.order(:id)
-  end
-
-  def show
-    @post
   end
 
   def new
