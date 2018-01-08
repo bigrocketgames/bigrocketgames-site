@@ -1,0 +1,6 @@
+<tr>
+  <td><%= mobileGame.id %></td>
+  <td><%= mobileGame.title %></td>
+  <td><%= link_to 'Edit Mobile Game', edit_admin_mobile_game_path(mobileGame.id), class: "admin-table-link" %> </td>
+  <td><%= link_to 'Delete Game', admin_mobile_games_path(mobileGame.id), method: :Delete, class: "admin-table-link" %></td>
+</tr>

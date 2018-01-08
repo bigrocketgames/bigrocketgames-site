@@ -5,6 +5,7 @@ class Admin::MobileGamesController < ApplicationController
   before_action :get_mobileGame, only: [:edit, :update, :destroy]
 
   def index
+    @mobileGames = MobileGame.all.order(:id)
   end
 
   def new

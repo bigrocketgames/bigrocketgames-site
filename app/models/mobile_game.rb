@@ -11,7 +11,7 @@ class MobileGame < ApplicationRecord
         self.title[self.title.length-1] = ""
       end
 
-      # strip off any whitespace and downcase the slug and replace any spaces with '-'
+      # strip off any whitespace and downcase the title and replace any spaces with '-'
       self.title = self.title.strip()
       self.slug = self.title.downcase.gsub(" ", "-")
     end
