@@ -1,10 +1,10 @@
 <div class="main-admin-content">
   <div class="admin-container">
-    <h2 class="text-center">Create New Post</h2>
+    <h2 class="text-center admin-page-header">Create New Post</h2>
 
     <% if flash[:alert] %>
       <div class="error-alert"><%= flash[:alert] %>
     <% end %>
-    <%= render "admin/posts/form" %>
+    <%= render "admin/posts/newForm" %>
   </div>
 </div>

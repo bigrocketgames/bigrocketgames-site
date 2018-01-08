@@ -14,6 +14,7 @@
 
  $primary-red: #dc143c;
  $black-text: #000;
+ $admin-header-text-color: #81fff9;
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
@@ -100,11 +101,11 @@
   }
 
   // Main Logo settings for size
-    .main-logo {
-      width: 400px;
-      display: block;
-      margin: auto;
-    }
+  .main-logo {
+    width: 400px;
+    display: block;
+    margin: auto;
+  }
 
   // Admin pages
   .sidebar {
@@ -147,4 +148,17 @@
     color: black;
     position: fixed;
     bottom: 60px;
+  }
+
+  .admin-page-header {
+    color: $admin-header-text-color;
+    font-weight: bolder;
+  }
+
+  .table-striped > tbody > tr:nth-of-type(even) {
+    background-color: #ccc;
+  }
+
+  .table-striped > thead > tr {
+    background-color: #ccc;
   }
