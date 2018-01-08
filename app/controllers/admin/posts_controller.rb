@@ -1,5 +1,6 @@
 class Admin::PostsController < ApplicationController
   layout "admin"
+  before_action :authenticate_user!
   before_action :get_post, only: [ :edit, :update, :destroy]
 
   def index

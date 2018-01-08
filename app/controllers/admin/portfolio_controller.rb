@@ -1,5 +1,6 @@
 class Admin::PortfolioController < ApplicationController
   layout "admin"
+  before_action :authenticate_user!
   before_action :get_portfolio, only: [:edit, :update, :destroy]
 
   def index
