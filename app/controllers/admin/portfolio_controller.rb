@@ -1,6 +1,7 @@
 class Admin::PortfolioController < ApplicationController
   layout "admin"
   before_action :authenticate_user!
+  before_action :check_user, only: [:create, :update, :destroy]
   before_action :get_portfolio, only: [:edit, :update, :destroy]
 
   def index
@@ -52,6 +53,13 @@ class Admin::PortfolioController < ApplicationController
 
   def get_portfolio
     @portfolio = Portfolio.find_by(id: params(:id))
+  end
+
+  def check_user
+    if !user_signed_in?
+      flash[:alert] = "You are not authorized for this action."
+      redirect_to root_path
+    end
   end
 
   def portfolio_params

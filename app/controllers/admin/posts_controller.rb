@@ -1,6 +1,7 @@
 class Admin::PostsController < ApplicationController
   layout "admin"
   before_action :authenticate_user!
+  before_action :check_user, only: [:create, :update, :destroy]
   before_action :get_post, only: [ :edit, :update, :destroy]
 
   def index
@@ -12,7 +13,6 @@ class Admin::PostsController < ApplicationController
   end
 
   def create
-    # if @user.admin
       post = Post.new(post_params)
 
       if post.save
@@ -24,10 +24,6 @@ class Admin::PostsController < ApplicationController
         flash[:alert] = "Error creating new post!"
         render :new
       end
-
-    # else 
-      # show unauthorized error 
-    # end
   end
 
   def edit
@@ -61,6 +57,13 @@ class Admin::PostsController < ApplicationController
 
   def get_post
     @post = Post.find_by(id: params[:id])
+  end
+
+  def check_user
+    if !user_signed_in?
+      flash[:alert] = "You are not authorized for this action."
+      redirect_to root_path
+    end
   end
 
   def post_params
