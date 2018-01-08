@@ -16,8 +16,12 @@ class Admin::PortfolioController < ApplicationController
     portfolio = Portfolio.new(portfolio_params)
 
     if portfolio.save
+      # show success message and redirect to the admin/portoflio page.
+      flash[:success] = "Successfully created portfolio site!"
       redirect_to admin_portfolio_index_path
     else
+      # show error that portfolio did not update and redirect back to the edit form.
+      flash[:alert] = "Error creating site!"
       render :new
     end
   end
@@ -29,7 +33,7 @@ class Admin::PortfolioController < ApplicationController
     if @portfolio.update(portfolio_params)
       # show success message and redirect to the admin/portoflio page.
       flash[:success] = "Successfully updated portfolio!"
-      redirect_to admin_portfolios_path
+      redirect_to admin_portfolio_index_path
     else
       # show error that portfolio did not update and redirect back to the edit form.
       flash[:alert] = "Error updating portfolio!"
@@ -41,18 +45,18 @@ class Admin::PortfolioController < ApplicationController
     if @portfolio.destroy
       # show success message and redirect to the admin portfolios page
       flash[:success] = "Successfully deleted portfolio!"
-      redirect_to admin_portfolios_path
+      redirect_to admin_portfolio_index_path
     else
       # show error that portfolio did not delete.
       flash[:alert] = "Error deleting portfolio!"
-      redirect_to admin_portfolios_path
+      redirect_to admin_portfolio_index_path
     end
   end
 
   private
 
   def get_portfolio
-    @portfolio = Portfolio.find_by(id: params(:id))
+    @portfolio = Portfolio.find_by(id: params[:id])
   end
 
   def check_user
