@@ -1,0 +1,6 @@
+<tr>
+  <td><%= browserGame.id %></td>
+  <td><%= browserGame.title %></td>
+  <td><%= link_to 'Edit Browser Game', edit_admin_browser_game_path(browserGame.id), class: "admin-table-link" %> </td>
+  <td><%= link_to 'Delete Game', admin_browser_games_path(browserGame.id), method: :Delete, class: "admin-table-link" %></td>
+</tr>
