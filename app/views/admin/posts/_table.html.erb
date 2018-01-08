@@ -1,0 +1,6 @@
+<tr>
+  <td><%= post.id %></td>
+  <td><%= post.title %></td>
+  <td><%= link_to 'Edit Post', edit_admin_post_path(post.id), class: "admin-table-link" %> </td>
+  <td><%= link_to 'Delete Post', admin_post_path(post.id), method: :Delete, class: "admin-table-link" %></td>
+</tr>

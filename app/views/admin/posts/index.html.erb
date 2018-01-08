@@ -1,5 +1,23 @@
 <div class="main-admin-content">
   <div class="admin-container">
-    show a table here with all of the posts so I can choose one to view, edit, or remove.
+    <% # display the flash messages if there are any. %>
+    <% if flash[:success] %>
+      <% flash.each do |key, value| %>
+      <div class="<%= flash_class(key) %>"><%= value %></div>
+      <% end %>
+    <% end %>
+
+    <h2 class="text-center admin-page-header">
+      POSTS
+    </h2> 
+    <table class="table table-striped table-bordered table-condensed">
+      <thead>
+        <td>#</td>
+        <td>Title</td>
+        <td>Edit</td>
+        <td>Delete</td>
+      </thead>
+      <%= render partial: "table", collection: @posts, as: :post %>
+    </table>
   </div>
 </div>
