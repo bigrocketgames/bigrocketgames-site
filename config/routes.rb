@@ -21,8 +21,8 @@ Rails.application.routes.draw do
   end
 
   namespace :games do
-    resources :mobile_games, only: [:show]
-    resources :browser_games, only: [:show]
+    resources :mobile_games, only: [:index, :show]
+    resources :browser_games, only: [:index, :show]
   end
 
   resources :portfolio, only: [:index, :show]
