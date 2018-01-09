@@ -1,3 +1,11 @@
 <div class="container">
-  <p>This is the portfolio index page</p>
+  <div class="row">
+    <% @portfolios.each do |portfolio| %>
+      <div class="col-xs-12 col-sm-4 portfolio-container">
+        <%= link_to image_tag( portfolio.screenshot.thumb, alt: `#{portfolio.title} screenshot`, class: "img-responsive center-block"), portfolio %>
+        <h5 class="text-center"><%= portfolio.title %></h5>
+        <p> <%= portfolio.description %></p>
+      </div>
+    <% end %>
+  </div>
 </div>
