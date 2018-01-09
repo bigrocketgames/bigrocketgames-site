@@ -1,0 +1,34 @@
+<%= simple_form_for @browserGame, url: admin_browser_game_path, method: :put do |f| %>
+  <% if @browserGame.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= "#{pluralize(@browserGame.errors.count, "error")} prohibited this game from being saved:" %>
+      </h2>
+      <ul>
+        <% @browserGame.errors.full_messages.each do |msg| %>
+          <li>
+            <%= msg %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.input :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :description, class: "form-control" %>
+  </div>
+
+  <span class="form-helper-text"> Write game instructions as a bullet list </span>
+  <div class="form-group">
+    <%= f.input :instructions, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}}, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.button :submit %>
+  </div>
+
+<% end %>
