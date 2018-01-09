@@ -27,3 +27,15 @@
   display: block;
   margin: auto;
 }
+
+.about-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 15px 10px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.about-container > p {
+  font-size: 18px;
+  font-weight: bold;
+}
