@@ -1,0 +1,41 @@
+$primary-red: #dc143c;
+$black-text: #000;
+$admin-header-text-color: #81fff9;
+
+//  navbar settings
+.navbar-fixed-top {
+  background-color: #ccc;
+  border: none;
+}
+
+.navbar-brand {
+  padding: 0 !important;
+  width: 120px;
+}
+
+.navbar-brand > .navbar-brand {
+  margin-left: 0px !important;
+  padding: 5px !important;
+}
+
+.navbar-default a.navbar-brand, .navbar-default a.navbar-brand:hover {
+  color: $black-text;
+}
+
+.nav {
+  li {
+    a {
+      color: $black-text !important;
+    }
+  }
+}
+
+.navbar-nav {
+  li.active > a {
+      background-color: $primary-red !important;
+  }
+}
+
+li.group-label {
+  padding-left: 10px;
+}

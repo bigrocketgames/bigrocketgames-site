@@ -1,0 +1,24 @@
+
+$primary-red: #dc143c;
+
+.home-page-content {
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-top: 10px;
+  padding: 15px 10px;
+  border-radius: 10px;
+}
+
+.home-page-content > p {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.site-link {
+  color: $primary-red;
+  text-decoration: none;
+}
+
+.site-link:hover {
+  color: slategray;
+  text-decoration: none;
+}

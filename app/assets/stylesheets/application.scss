@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  */
+ //= require_tree .
 
  $primary-red: #dc143c;
  $black-text: #000;
@@ -20,162 +21,9 @@
  @import "bootstrap";
  @import "bootstrap/variables";
 
-//  navbar settings
-  .navbar-fixed-top {
-    background-color: #ccc;
-    border: none;
-  }
-
-  .navbar-brand {
-    padding: 0;
-    width: 120px;
-  }
-
-  .navbar-brand > .navbar-brand {
-    margin-left: 0px !important;
-    padding: 5px;
-  }
-
-  .navbar-default a.navbar-brand, .navbar-default a.navbar-brand:hover {
-    color: $black-text;
-  }
-
-  .nav {
-    li {
-      a {
-        color: $black-text !important;
-      }
-    }
-  }
-
-  .navbar-nav {
-    li.active > a {
-        background-color: $primary-red !important;
-    }
-  }
-
-  li.group-label {
-    padding-left: 10px;
-  }
-
-  // footer settings
-  footer {
-    clear: both;
-    text-align: center;
-    font-size: 16px;
-    margin-top: 40px;
-    color: $primary-red;
-  }
-
-  footer {
-    .container-fluid {
-      background-color: #ccc;
-    }
-  }
-
-  footer {
-    p {
-      padding-top: 8px;
-      font-weight: 600;
-    }
-  }
-
-  // Body settings
-  Body {
-    padding-top: 60px;
-  }
-
-  Body.main {
-    background: url("/uploads/images/content_sky-383823_1920.jpg") center center no-repeat fixed;
-    background-size: cover;
-  }
-
-  Body.home {
-    background: url("/uploads/images/content_rocket_on_road.jpg") center center no-repeat fixed;
-    background-size: cover;
-  }
-
-  Body.admin {
-    background: url("/uploads/images/content_milky-way-2695569_1920.jpg") center center no-repeat fixed;
-    background-size: cover;
-  }
-
-  // Main Logo settings for size
-  .main-logo {
-    width: 400px;
-    display: block;
-    margin: auto;
-  }
-
-  // Admin pages
-  .admin-home-content {
-    background-color: rgba(255, 255, 255, .7);
-    padding: 5px;
-    border-radius: 10px;
-  }
-
-  .sidebar {
-    position: fixed;
-    left: 0;
-    top: 60px;
-    bottom: 40px;
-    min-width: 200px;
-    max-width: 300px;
-    padding: 10px;
-    margin-top: -10px;
-    background-color: #ccc;
-    border: solid #fff;
-    border-width: 5px 5px 5px 0;
-  }
-
-  .main-admin-content {
-    width: 80%;
-    margin-top: -10px;
-    margin-bottom: 40px;
-    float: right;
-    padding: 15px;
-  }
-
-  .admin-container {
-    width: 85%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .admin-link {
-    color: black;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    display: block;
-  }
-
-  .admin-signout-link {
-    color: black;
-    position: fixed;
-    bottom: 60px;
-  }
-
-  .admin-page-header {
-    color: $admin-header-text-color;
-    font-weight: bolder;
-  }
-
-  .table-striped > tbody > tr:nth-of-type(even) {
-    background-color: #ccc;
-  }
-
-  .table-striped > thead > tr {
-    background-color: #ccc;
-  }
-
-  // Admin form controls
-  form {
-    background-color: rgba(255, 255, 255, .5);
-    padding: 5px;
-    border-radius: 10px;
-  }
-
-  .form-helper-text {
-    font-weight: bolder;
-  }
+// Main Logo settings for size
+.main-logo {
+  width: 400px;
+  display: block;
+  margin: auto;
+}

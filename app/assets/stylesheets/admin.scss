@@ -1,0 +1,76 @@
+$primary-red: #dc143c;
+$black-text: #000;
+$admin-header-text-color: #81fff9;
+
+// Admin pages
+.admin-home-content {
+  background-color: rgba(255, 255, 255, .7);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  bottom: 40px;
+  min-width: 200px;
+  max-width: 300px;
+  padding: 10px;
+  margin-top: -10px;
+  background-color: #ccc;
+  border: solid #fff;
+  border-width: 5px 5px 5px 0;
+}
+
+.main-admin-content {
+  width: 80%;
+  margin-top: -10px;
+  margin-bottom: 40px;
+  float: right;
+  padding: 15px;
+}
+
+.admin-container {
+  width: 85%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.admin-link {
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.admin-signout-link {
+  color: black;
+  position: fixed;
+  bottom: 60px;
+}
+
+.admin-page-header {
+  color: $admin-header-text-color;
+  font-weight: bolder;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #ccc;
+}
+
+.table-striped > thead > tr {
+  background-color: #ccc;
+}
+
+// Admin form controls
+form {
+  background-color: rgba(255, 255, 255, .5);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.form-helper-text {
+  font-weight: bolder;
+}
