@@ -9,6 +9,7 @@ class Admin::BrowserGamesController < ApplicationController
   end
 
   def new
+    @browserGame = BrowserGame.new
   end
 
   def create

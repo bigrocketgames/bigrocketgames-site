@@ -1,0 +1,10 @@
+<div class="main-admin-content">
+  <div class="admin-container">
+    <h2 class="text-center admin-page-header">Create New Browser Game</h2>
+
+    <% if flash[:alert] %>
+      <div class="error-alert"><%= flash[:alert] %>
+    <% end %>
+    <%= render "admin/browser_games/newForm" %>
+  </div>
+</div>
