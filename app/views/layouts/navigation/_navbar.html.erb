@@ -19,12 +19,12 @@
         <li class="dropdown games-link">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li class="group-label">Mobile Games</li>
+            <li class="group-label"><%= link_to 'Mobile Games', games_mobile_games_path %></li>
             <li role="separator" class="divider"></li>
             <li class="rm-game-link"><a href="/games/mobile_games/rocket-math">RocketMath</a></li>
             <li class="sd-game-link"><a href="/games/mobile_games/starbase-defender">Starbase Defender</a></li>
             <li role="separator" class="divider"></li>
-            <li class="group-label">Browser Games</li>
+            <li class="group-label"><%= link_to 'Browser Games', games_browser_games_path %></li>
             <li role="separator" class="divider"></li>
             <li class="tas-game-link"><a href="/games/browser_games/toddler-animal-sounds">Toddler Animal Sounds</a></li>
             <li class="vp-game-link"><a href="/games/browser_games/virtual-pet">Virtual Pet</a></li>
