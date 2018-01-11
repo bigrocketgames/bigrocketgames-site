@@ -1,11 +1,16 @@
-
+<% require 'find' %>
 
 <div class="container">
   <div class="row">
     <p>this will be where the game is played.</p>
   </div>
   <div class="row">
-    <p>game title</p>
+    <p><%= @browserGame.slug %></p>
     <p>game description</p>
     <p>game instructions</p>
   </div>
+
+  <script src="<%= "/browserGames/#{@browserGame.slug}/main.js" %>"></script>
+  
+
+  

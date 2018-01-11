@@ -13,7 +13,7 @@ class Admin::MobileGamesController < ApplicationController
   end
 
   def create
-    mobileGame = MobileGame.new(:mobileGamesParams)
+    mobileGame = MobileGame.new(mobileGamesParams)
 
     if mobileGame.save
       # show success message and redirect to the admin mobile games list
@@ -30,7 +30,7 @@ class Admin::MobileGamesController < ApplicationController
   end
 
   def update
-    if @mobileGame.update(:mobileGamesParams)
+    if @mobileGame.update(mobileGamesParams)
       # show success message and redirect to the admin mobile games list
       flash[:success] = "Successfully updated mobile game!"
       redirect_to admin_mobile_games_path
@@ -42,7 +42,7 @@ class Admin::MobileGamesController < ApplicationController
   end
 
   def destroy
-    if @mobileGame.update(:mobileGamesParams)
+    if @mobileGame.update(mobileGamesParams)
       # show success message and redirect to the admin mobile games list
       flash[:success] = "Successfully deleted mobile game!"
       redirect_to admin_mobile_games_path

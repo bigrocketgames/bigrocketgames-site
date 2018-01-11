@@ -8,10 +8,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="home">
+  <body class="main">
     <%= render "layouts/navigation/navbar" %>
-    <%= image_tag "/uploads/images/content_logo_hires.png", alt: "Big Rocket Games Logo", class: "main-logo" %>
     <%= yield %>
+    <%= yield :game %>
   </body>
 
   <footer class="footer">

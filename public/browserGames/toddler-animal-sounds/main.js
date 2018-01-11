@@ -6,18 +6,18 @@ var GameState =
         //load the game assets before the game starts
         preload: function()
         {
-            this.load.image("background", "../../wp-content/themes/bigrocket/game-assets/animalsoundfun/images/background.png");
-            this.load.image("arrow", "../../wp-content/themes/bigrocket/game-assets/animalsoundfun/images/arrow.png");
+            this.load.image("background", "/browserGames/toddler-animal-sounds/images/background.png");
+            this.load.image("arrow", "/browserGames/toddler-animal-sounds/images/arrow.png");
 
-            this.load.spritesheet("chicken", "../../wp-content/themes/bigrocket/game-assets/animalsoundfun/images/chicken_spritesheet.png", 131, 200, 3);
-            this.load.spritesheet("horse", "../../wp-content/themes/bigrocket/game-assets/animalsoundfun/images/horse_spritesheet.png", 212, 200, 3);
-            this.load.spritesheet("pig", "../../wp-content/themes/bigrocket/game-assets/animalsoundfun/images/pig_spritesheet.png", 297, 200, 3);
-            this.load.spritesheet("sheep", "../../wp-content/themes/bigrocket/game-assets/animalsoundfun/images/sheep_spritesheet.png", 244, 200, 3);
+            this.load.spritesheet("chicken", "/browserGames/toddler-animal-sounds/images/chicken_spritesheet.png", 131, 200, 3);
+            this.load.spritesheet("horse", "/browserGames/toddler-animal-sounds/images/horse_spritesheet.png", 212, 200, 3);
+            this.load.spritesheet("pig", "/browserGames/toddler-animal-sounds/images/pig_spritesheet.png", 297, 200, 3);
+            this.load.spritesheet("sheep", "/browserGames/toddler-animal-sounds/images/sheep_spritesheet.png", 244, 200, 3);
 
-            this.load.audio("chickenSound", ["../../wp-content/themes/bigrocket/game-assets/animalsoundfun/audio/chicken.ogg", "../../../wp-content/themes/bigrocket/game-assets/animalsoundfun/audio/chicken.mp3"]);
-            this.load.audio("horseSound", ["../../wp-content/themes/bigrocket/game-assets/animalsoundfun/audio/horse.ogg", "../../../wp-content/themes/bigrocket/game-assets/animalsoundfun/audio/horse.mp3"]);
-            this.load.audio("pigSound", ["../../wp-content/themes/bigrocket/game-assets/animalsoundfun/audio/pig.ogg", "../../../wp-content/themes/bigrocket/game-assets/animalsoundfun/audio/pig.mp3"]);
-            this.load.audio("sheepSound", ["../../wp-content/themes/bigrocket/game-assets/animalsoundfun/audio/sheep.ogg", "../../../wp-content/themes/bigrocket/game-assets/animalsoundfun/audio/sheep.mp3"]);
+            this.load.audio("chickenSound", ["/browserGames/toddler-animal-sounds/audio/chicken.ogg", "/browserGames/toddler-animal-sounds/audio/chicken.mp3"]);
+            this.load.audio("horseSound", ["/browserGames/toddler-animal-sounds/audio/horse.ogg", "/browserGames/toddler-animal-sounds/audio/horse.mp3"]);
+            this.load.audio("pigSound", ["/browserGames/toddler-animal-sounds/audio/pig.ogg", "/browserGames/toddler-animal-sounds/audio/pig.mp3"]);
+            this.load.audio("sheepSound", ["/browserGames/toddler-animal-sounds/audio/sheep.ogg", "/browserGames/toddler-animal-sounds/audio/sheep.mp3"]);
 
         },
 

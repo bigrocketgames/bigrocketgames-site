@@ -13,8 +13,8 @@ var BootState = {
 
     preload: function ()
     {
-        this.load.image('preloadBar', '../../wp-content/themes/bigrocket/game-assets/virtualpet/images/bar.png');
-        this.load.image('logo', '../../wp-content/themes/bigrocket/game-assets/virtualpet/images/logo.png');
+        this.load.image('preloadBar', './images/bar.png');
+        this.load.image('logo', './images/logo.png');
     },
 
     create: function()

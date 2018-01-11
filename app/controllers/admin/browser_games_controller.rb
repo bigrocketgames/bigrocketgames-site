@@ -13,7 +13,7 @@ class Admin::BrowserGamesController < ApplicationController
   end
 
   def create
-    browserGame = BrowserGame.new(:browserGame_params)
+    browserGame = BrowserGame.new(browserGame_params)
 
     if browserGame.save
       # show success message and redirect to the admin browser games list
@@ -30,7 +30,7 @@ class Admin::BrowserGamesController < ApplicationController
   end
 
   def update
-    if @browserGame.update(:browserGame_params)
+    if @browserGame.update(browserGame_params)
       # show success message and redirect 
       flash[:success] = "Successfully updated browser game!"
       redirect_to admin_browser_games_path
