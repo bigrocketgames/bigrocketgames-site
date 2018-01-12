@@ -11,14 +11,14 @@ var Preload = {
         this.preloadBar.anchor.setTo(0.5);
         this.load.setPreloadSprite(this.preloadBar);
 
-        this.load.image('backyard', './images/backyard.png');
-        this.load.image('apple', './images/apple.png');
-        this.load.image('candy', './images/candy.png');
-        this.load.image('rotate', './images/rotate.png');
-        this.load.image('toy', './images/rubber_duck.png');
-        this.load.image('arrow', './images/arrow.png');
+        this.load.image('backyard', '/browserGames/virtual-pet/images/backyard.png');
+        this.load.image('apple', '/browserGames/virtual-pet/images/apple.png');
+        this.load.image('candy', '/browserGames/virtual-pet/images/candy.png');
+        this.load.image('rotate', '/browserGames/virtual-pet/images/rotate.png');
+        this.load.image('toy', '/browserGames/virtual-pet/images/rubber_duck.png');
+        this.load.image('arrow', '/browserGames/virtual-pet/images/arrow.png');
 
-        this.load.spritesheet('pet', './images/pet.png', 97, 83, 5, 1, 1);
+        this.load.spritesheet('pet', '/browserGames/virtual-pet/images/pet.png', 97, 83, 5, 1, 1);
 
     },
 

@@ -13,8 +13,8 @@ var BootState = {
 
     preload: function ()
     {
-        this.load.image('preloadBar', './images/bar.png');
-        this.load.image('logo', './images/logo.png');
+        this.load.image('preloadBar', '/browserGames/virtual-pet/images/bar.png');
+        this.load.image('logo', '/browserGames/virtual-pet/images/logo.png');
     },
 
     create: function()

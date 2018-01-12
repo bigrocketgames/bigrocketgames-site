@@ -66,8 +66,6 @@ var GameState = {
 
     pickItem: function (sprite, event) {
         if (!this.uiBlocked) {
-            console.log('pick item');
-
             this.clearSelection();
 
             sprite.alpha = 0.4;

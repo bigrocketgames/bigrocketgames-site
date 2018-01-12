@@ -5,12 +5,22 @@
     <p>this will be where the game is played.</p>
   </div>
   <div class="row">
+    
     <p><%= @browserGame.slug %></p>
     <p>game description</p>
     <p>game instructions</p>
   </div>
 
-  <script src="<%= "/browserGames/#{@browserGame.slug}/main.js" %>"></script>
+  <% content_for :game do %>
+    <% Dir["public/browserGames/#{@browserGame.slug}/*.js"].each do |file| %>
+      <% next if file.match?(/main.js/) %>
+      <% arr = file.split("/") %>
+      <script src="<%= "/browserGames/#{@browserGame.slug}/#{arr.last}" %>"></script>
+    <% end %>
+      <script src="<%= "/browserGames/#{@browserGame.slug}/main.js" %>"></script>
+  <% end %>
+
+  
   
 
   
