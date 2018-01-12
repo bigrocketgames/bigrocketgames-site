@@ -26,8 +26,9 @@
             <li role="separator" class="divider"></li>
             <li class="group-label"><%= link_to 'Browser Games', games_browser_games_path %></li>
             <li role="separator" class="divider"></li>
-            <li class="tas-game-link"><a href="/games/browser_games/toddler-animal-sounds">Toddler Animal Sounds</a></li>
-            <li class="vp-game-link"><a href="/games/browser_games/virtual-pet">Virtual Pet</a></li>
+            <% BrowserGame.all.order(:title).each do |bgame| %>
+            <li class="<%= bgame.linkClass %>"><%= link_to "#{bgame.title}", games_browser_game_path(bgame.slug) %></li>
+            <% end %>
           </ul>
         </li>
         <li class="portfolio-link"><%= link_to 'Portfolio', portfolio_index_path %></li>
