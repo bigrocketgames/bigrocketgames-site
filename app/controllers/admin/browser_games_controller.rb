@@ -67,7 +67,7 @@ class Admin::BrowserGamesController < ApplicationController
   end
 
   def browserGame_params
-    params.require(:browser_game).permit(:title, :description, :instructions)
+    params.require(:browser_game).permit(:title, :description, :instructions, :screenshot)
   end
 
 end
