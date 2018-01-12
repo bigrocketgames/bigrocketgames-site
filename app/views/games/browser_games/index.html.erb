@@ -4,7 +4,7 @@
         <% @browserGames.each do |bGame| %>
             <div class="col-xs-12 col-sm-5 game-container">
                 <%= link_to image_tag( bGame.screenshot.thumb, alt: "#{bGame.title} screenshot", class: "img-responisve center-block"), games_browser_game_path(bGame.slug) %>
-                <h5 class="text-center"><%= bGame.title %></h5>
+                <h3 class="text-center"><%= bGame.title %></h3>
                 <p><%= bGame.description %></p>
             </div>
         <% end %>
