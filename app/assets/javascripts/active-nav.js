@@ -33,6 +33,9 @@ document.addEventListener("turbolinks:load", function() {
   }
 
   function findGame(path) {
+    if (path.split("/").length < 4) {
+      return
+    }
     const game = path.split("/")[3];
     const gameWords = game.split("-");
     let gameInitials = ''
