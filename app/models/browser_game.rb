@@ -13,5 +13,13 @@ class BrowserGame < ApplicationRecord
       self.title = self.title.strip()
       self.slug = self.title.downcase.gsub(" ", "-")
     end
+
+    linkClass = ""
+
+    self.slug.split("-").each do |word|
+      linkClass += word[0]
+    end
+
+    self.linkClass = "#{linkClass}-game-link"
   end
 end
