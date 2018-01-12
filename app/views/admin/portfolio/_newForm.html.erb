@@ -2,7 +2,7 @@
   <% if @portfolio.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= "#{pluralize(@portfolio.errors.count, "error")} prohibited this post from being saved:" %>
+        <%= "#{pluralize(@portfolio.errors.count, "error")} prohibited this portfolio item from being saved:" %>
       </h2>
       <ul>
         <% @portfolio.errors.full_messages.each do |msg| %>
