@@ -1,4 +1,6 @@
 class BrowserGame < ApplicationRecord
+  mount_uploader :screenshot, ScreenshotsUploader
+  
   validates :title, uniqueness: true
   validates :title, :description, :instructions, presence: true
   
