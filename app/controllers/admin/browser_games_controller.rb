@@ -1,7 +1,7 @@
 class Admin::BrowserGamesController < ApplicationController
   layout "admin"
   before_action :authenticate_user!
-  before_action :check_user, only: [:create, :update, :destroy]
+  before_action :check_admin
   before_action :get_browserGame, only: [:edit, :update, :destroy]
 
   def index
@@ -55,10 +55,10 @@ class Admin::BrowserGamesController < ApplicationController
 
   private
 
-  def check_user
-    if !user_signed_in?
+  def check_admin
+    if !current_user.admin?
       flash[:alert] = "You are not authorized for this action."
-      redirect_to root_path
+      redirect_to home_path
     end
   end
 
