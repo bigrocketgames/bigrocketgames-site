@@ -2,13 +2,7 @@
 
 <div class="container">
   <div class="row">
-    <p>this will be where the game is played.</p>
-  </div>
-  <div class="row">
-    
-    <p><%= @browserGame.slug %></p>
-    <p>game description</p>
-    <p>game instructions</p>
+    <h1 class="text-center game-title"><%= @browserGame.title %></h1>
   </div>
 
   <% content_for :game do %>
