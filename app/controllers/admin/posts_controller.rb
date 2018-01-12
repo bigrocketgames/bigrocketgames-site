@@ -1,7 +1,7 @@
 class Admin::PostsController < ApplicationController
   layout "admin"
   before_action :authenticate_user!
-  before_action :check_user, only: [:create, :update, :destroy]
+  before_action :check_admin
   before_action :get_post, only: [ :edit, :update, :destroy]
 
   def index
@@ -13,9 +13,9 @@ class Admin::PostsController < ApplicationController
   end
 
   def create
-      post = Post.new(post_params)
+      @post = Post.new(post_params)
 
-      if post.save
+      if @post.save
         # show success message and redirect to the newly created post page
         flash[:success] = "Successfully created post!"
         redirect_to admin_posts_path
@@ -59,15 +59,15 @@ class Admin::PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
   end
 
-  def check_user
-    if !user_signed_in?
+  def check_admin
+    if !current_user.admin?
       flash[:alert] = "You are not authorized for this action."
-      redirect_to root_path
+      redirect_to home_path
     end
   end
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :user_id)
   end
 
 end

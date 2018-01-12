@@ -2,7 +2,7 @@
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= "#{pluralize(@post.errors.count, "error")} prohibited this post from being save:" %>
+        <%= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:" %>
       </h2>
       <ul>
         <% @post.errors.full_messages.each do |msg| %>
@@ -16,6 +16,10 @@
 
   <div class="form-group">
     <%= f.input :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :user_id, as: :hidden, input_html: { :value => "#{current_user.id}"}, class: "form-control" %>
   </div>
 
   <div class="form-group">
