@@ -19,8 +19,3 @@
 .env
 .byebug_history
 .vscode/settings.json
-
-
-# Ignore secrets and other config files that capistrano will symlink to site
-config/database.yml
-config/secrets.yml
