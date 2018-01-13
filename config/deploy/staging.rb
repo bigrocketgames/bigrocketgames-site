@@ -31,6 +31,9 @@
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 
+# Default deploy_to directory is /var/www/my_app_name
+set :deploy_to, "/test.bigrocketgames.com"
+
 
 
 # Custom SSH Options
