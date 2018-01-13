@@ -2,10 +2,12 @@
 <div class="container">
     <div class="row">
         <% @browserGames.each do |bGame| %>
-            <div class="col-xs-12 col-sm-5 game-container">
-                <%= link_to image_tag( bGame.screenshot.thumb, alt: "#{bGame.title} screenshot", class: "img-responisve center-block"), games_browser_game_path(bGame.slug) %>
-                <h3 class="text-center"><%= bGame.title %></h3>
-                <p><%= bGame.description %></p>
+            <div class="col-xs-12 col-sm-4">
+                <div class="game-container">
+                    <%= link_to image_tag( bGame.screenshot.thumb, alt: "#{bGame.title} screenshot", class: "img-responsive center-block"), games_browser_game_path(bGame.slug) %>
+                    <h3 class="text-center"><%= bGame.title %></h3>
+                    <p><%= bGame.description %></p>
+                </div>
             </div>
         <% end %>
     </div>
