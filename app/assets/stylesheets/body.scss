@@ -4,7 +4,7 @@ $admin-header-text-color: #81fff9;
 
 // Body settings
 Body {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 Body.main {
@@ -20,4 +20,5 @@ Body.home {
 Body.admin {
   background: url("/uploads/images/content_milky-way-2695569_1920.jpg") center center no-repeat fixed;
   background-size: cover;
+  padding-top: 60px;
 }

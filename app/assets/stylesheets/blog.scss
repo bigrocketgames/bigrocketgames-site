@@ -8,16 +8,18 @@ $admin-header-text-color: #81fff9;
   font-size: 44px;
 }
 
-.blog-post-container {
-  background-color: rgba(255, 255, 255, 0.6);
+.blog-container {
+  background-color: white;
+}
+
+div.blog-post-container {
   padding: 15px 10px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
-.post-comment-container {
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 15px 10px;
+div.post-comment-container {
+  padding: 5px 10px;
   border-radius: 10px;
   margin-bottom: 10px;
 }

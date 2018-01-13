@@ -1,16 +1,21 @@
-<div class="container">
+<div class="container blog-container">
 
   <h1 class="text-center blog-title">Big Rocket Blog</h1>
 
+  <hr/>
+
   <% @posts.each do |post| %>
 
-  <div class="blog-post-container">
-    <h2><%= link_to "#{post.title}", blog_post_path(post.slug), class: "site-link" %></h2>
+  <div class="container">
+    <h2 class="text-center"><%= link_to "#{post.title}", blog_post_path(post.slug), class: "site-link" %></h2>
+    <p class="text-center"><%= post.created_at.strftime("Posted on: %m/%d/%Y") %></p>
 
     <p><%= raw(post.body) %></p>
 
     <p><%= post.comments.length %> comments</p>
   </div>
+
+  <hr/>
 
   <% end %>
 

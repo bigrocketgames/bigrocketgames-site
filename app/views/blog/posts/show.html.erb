@@ -1,17 +1,21 @@
-<%= image_tag "/uploads/images/content_logo_hires.png", alt: "Big Rocket Games Logo", class: "main-logo" %>
+<div class="container blog-container">
+  <%= image_tag "/uploads/images/content_logo_hires.png", alt: "Big Rocket Games Logo", class: "main-logo" %>
 
-<div class="container blog-post-container">
-  <h2><%= @post.title %></h2>
 
-  <p><%= raw @post.body %></p>
+  <div class="row blog-post-container">
+    <h2><%= @post.title %></h2>
 
-</div>
+    <p><%= raw @post.body %></p>
 
-<div class="container post-comment-container">
-  <h3 class="comment-title">Comments:</h3>
-  <% @post.comments.each do |comment| %>
+    <hr />
+  </div>
 
-    <p><%= comment.body %></p>
+  <div class="row post-comment-container">
+    <h3 class="comment-title">Comments:</h3>
+    <% @post.comments.each do |comment| %>
 
-  <% end %>
+      <p><%= comment.body %></p>
+
+    <% end %>
+  </div>
 </div>
