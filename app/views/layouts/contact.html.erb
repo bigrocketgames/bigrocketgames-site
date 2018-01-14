@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BigRocketGames - Contact Us</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="main">
+    <%= render "layouts/navigation/navbar" %>
+    <%= image_tag "/uploads/images/content_logo_hires.png", alt: "Big Rocket Games Logo", class: "main-logo" %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 contact-page-content"> 
+          <h2 class="text-center">
+            <i class="glyphicon glyphicon-envelope"></i> Contact Us
+          </h2>
+          <ul class="list-group">
+            <li class="list-group-item" style="border-top-right-radius: 25px; border-top-left-radius: 25px;">Have us create your website or web application.</li>
+            <li class="list-group-item">Have us bring your game idea to life.</li>
+            <li class="list-group-item">Let us know about an issue with one of our sites or games.</li>
+            <li class="list-group-item" style="border-bottom-right-radius: 25px; border-bottom-left-radius: 25px;">Just share some random thoughts with us.</li>
+          </ul>
+
+          <%= yield %>
+
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <p>Big Rocket Games LLC Copyright &copy; 2015-2018.  All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+</html>
