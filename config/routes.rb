@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'about', to: 'static#about'
 
   resources :contact, only: [:new, :create]
+  get '/contact', to: 'contact#new'
 
   namespace :blog do
     root 'posts#index', as: 'home'
