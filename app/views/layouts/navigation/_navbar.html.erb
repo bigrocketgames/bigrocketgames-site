@@ -21,8 +21,9 @@
           <ul class="dropdown-menu">
             <li class="group-label"><%= link_to 'Mobile Games', games_mobile_games_path %></li>
             <li role="separator" class="divider"></li>
-            <li class="rm-game-link"><a href="/games/mobile_games/rocket-math">RocketMath</a></li>
-            <li class="sd-game-link"><a href="/games/mobile_games/starbase-defender">Starbase Defender</a></li>
+            <% MobileGame.all.order(:title).each do |mGame| %>
+              <li class="<%= mGame.linkClass %>"><%= link_to "#{mGame.title}", games_mobile_game_path(mGame.slug) %></li>
+            <% end %>
             <li role="separator" class="divider"></li>
             <li class="group-label"><%= link_to 'Browser Games', games_browser_games_path %></li>
             <li role="separator" class="divider"></li>
@@ -33,7 +34,7 @@
         </li>
         <li class="portfolio-link"><%= link_to 'Portfolio', portfolio_index_path %></li>
         <li class="about-link"><%= link_to 'About', about_path %></li>
-        <li class="contact-link"><%= link_to 'Contact Us', contact_path %></li>
+        <li class="contact-link"><%= link_to 'Contact Us', new_contact_path %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
