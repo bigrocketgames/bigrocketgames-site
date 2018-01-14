@@ -13,6 +13,7 @@ gem 'simple_form'
 gem 'ckeditor', '~> 4.1'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog-aws'
 # Used for delightful styling
 gem 'jquery-rails'
 gem 'bootstrap-sass'
