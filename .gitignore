@@ -19,3 +19,4 @@
 .env
 .byebug_history
 .vscode/settings.json
+public/uploads/tmp
