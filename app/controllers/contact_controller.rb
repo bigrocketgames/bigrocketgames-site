@@ -5,16 +5,17 @@ class ContactController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(params[contact_params])
+    binding.pry
+    @contact = Contact.new(contact_params)
 
     if @contact.save
       ContactMailer.contact_base(@contact).deliver_later
-
       flash[:success] = "You have successfully submitted your contact request."
-      redirect_to contact_path
+      redirect_to new_contact_path
     else
       flash[:error] = "Error creating new contact."
       render :new
+    end
   end
 
   private
