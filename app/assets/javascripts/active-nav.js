@@ -2,34 +2,20 @@ document.addEventListener("turbolinks:load", function() {
   resetHeaderClasses();
 
   const path = window.location.pathname;
-  const pathFound = pathSearch(path);
 
-  if (path === "/about") {
+  if (path.search("/about") > -1) {
     $('.about-link').addClass('active');
-  } else if (path === "/contact") {
+  } else if (path.search("/contact") > -1) {
     $('.contact-link').addClass('active');
-  } else if (pathFound === "portfolio") {
+  } else if (path.search("portfolio") > -1) {
     $('.portfolio-link').addClass('active');
-  } else if (pathFound === "blog") {
+  } else if (path.search("blog") > -1) {
     $('.blog-link').addClass('active');
-  } else if (pathFound === "mobile-games" || pathFound === "browser-games") {
+  } else if (path.search("_games") > -1) {
     $('.games-link').addClass('active');
     findGame(path);
   } else {
     $('.home-link').addClass('active');
-  }
-
-  function pathSearch(path){
-
-    if (path.search("/games/mobile_games") > -1) {
-      return "mobile-games";
-    } else if (path.search("/games/browser_games") > -1) {
-      return "browser-games";
-    } else if (path.search("/blog") > -1) {
-      return "blog";
-    } else if (path.search("/portfolio") > -1) {
-      return "portfolio";
-    }
   }
 
   function findGame(path) {
