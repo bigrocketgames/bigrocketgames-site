@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  enum status: [:draft, :published]
+  enum status: [ :draft, :published ]
   belongs_to :user
   has_many :comments
 
