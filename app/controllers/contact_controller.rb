@@ -10,7 +10,7 @@ class ContactController < ApplicationController
     if @contact.save
       ContactMailer.contact_base(@contact).deliver_later
       flash[:success] = "You have successfully submitted your contact request."
-      redirect_to new_contact_path
+      redirect_to contact_path
     else
       flash[:error] = "Error creating new contact."
       render :new
