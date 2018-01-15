@@ -15,6 +15,10 @@ class Admin::PostsController < ApplicationController
   def create
       @post = Post.new(post_params)
 
+      if @post.status == "published"
+        @post.publishedDate = @post.created_at
+      end
+
       if @post.save
         # show success message and redirect to the newly created post page
         flash[:success] = "Successfully created post!"
@@ -30,6 +34,10 @@ class Admin::PostsController < ApplicationController
   end
 
   def update
+    if params[:post][:status] == "published" && @post.publishedDate == nil
+      @post.publishedDate = Time.now()
+    end
+
     if @post.update(post_params)
       # show success message and redirect to the newly created post page
       flash[:success] = "Successfully updated post!"
