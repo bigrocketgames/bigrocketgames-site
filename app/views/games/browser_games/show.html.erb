@@ -7,7 +7,7 @@
 
   <% content_for :game do %>
     <% Dir["public/browserGames/#{@browserGame.slug}/*.js"].each do |file| %>
-      <% next if file.match?(/main.js/) %>
+      <% next if file.include?("main.js") %>
       <% arr = file.split("/") %>
       <script src="<%= "/browserGames/#{@browserGame.slug}/#{arr.last}" %>"></script>
     <% end %>
