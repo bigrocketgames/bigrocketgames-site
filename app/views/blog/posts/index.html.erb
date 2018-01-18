@@ -10,7 +10,7 @@
     <h2 class="text-center"><%= link_to "#{post.title}", blog_post_path(post.slug), class: "site-link" %></h2>
     <p class="text-center"><%= post.publishedDate.strftime("Posted on: %m/%d/%Y") %></p>
 
-    <p><%= truncate(raw(post.body), length: 150) %></p>
+    <p><%= raw(post.body) %></p>
 
   </div>
 
