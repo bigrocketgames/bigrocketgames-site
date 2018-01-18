@@ -8,11 +8,10 @@
 
   <div class="container">
     <h2 class="text-center"><%= link_to "#{post.title}", blog_post_path(post.slug), class: "site-link" %></h2>
-    <p class="text-center"><%= post.created_at.strftime("Posted on: %m/%d/%Y") %></p>
+    <p class="text-center"><%= post.publishedDate.strftime("Posted on: %m/%d/%Y") %></p>
 
-    <p><%= raw(post.body) %></p>
+    <p><%= truncate(raw(post.body), length: 150) %></p>
 
-    <p><%= post.comments.length %> comments</p>
   </div>
 
   <hr/>
