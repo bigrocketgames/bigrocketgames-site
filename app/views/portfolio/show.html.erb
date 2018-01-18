@@ -13,4 +13,11 @@
     <h3>Features:</h3>
     <%= raw(@portfolio.features) %>
   </div>
+
+  <div class="row portfolio-details">
+    <h3>Related Links:</h3>
+    <%= link_to 'Source Code', @portfolio.sourceCodeLink, class: "site-link", target: "_blank" %>
+    <br >
+    <%= link_to 'Live Site', @portfolio.siteLink, class: "site-link", target: "_blank" %>
+  </div>
 </div>
