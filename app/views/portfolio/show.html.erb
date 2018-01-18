@@ -1,3 +1,16 @@
-<div class="container">
-  <p>This is the portfolio show page</p>
+<div class="container portfolio-site-container">
+  <div class="row">
+    <h1 class="text-center red-text"><%= @portfolio.title %></h1>
+    <%= image_tag "#{@portfolio.screenshot}", class: "img-responsive center-block portfolio-img" %>
+  </div>
+
+  <div class="row portfolio-details">
+    <h3>Description:</h3>
+    <p><%= @portfolio.description %></p>
+  </div>
+
+  <div class="row portfolio-details">
+    <h3>Features:</h3>
+    <%= raw(@portfolio.features) %>
+  </div>
 </div>
