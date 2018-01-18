@@ -1,9 +1,10 @@
 <div class="container blog-container">
   <%= image_tag "/uploads/images/content_logo_hires.png", alt: "Big Rocket Games Logo", class: "main-logo" %>
 
+  <hr />
 
   <div class="row blog-post-container">
-    <h2><%= @post.title %></h2>
+    <h2 class="text-center red-text"><%= @post.title %></h2>
 
     <p><%= raw @post.body %></p>
 
