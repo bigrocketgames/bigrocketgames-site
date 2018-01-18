@@ -16,7 +16,7 @@ class Admin::PostsController < ApplicationController
       @post = Post.new(post_params)
 
       if @post.status == "published"
-        @post.publishedDate = @post.created_at
+        @post.publishedDate = Time.now()
       end
 
       if @post.save
