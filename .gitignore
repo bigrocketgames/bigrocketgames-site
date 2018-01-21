@@ -20,3 +20,4 @@
 .byebug_history
 .vscode/settings.json
 public/uploads/tmp
+*.ds_store
