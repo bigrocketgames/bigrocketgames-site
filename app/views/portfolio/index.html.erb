@@ -1,12 +1,16 @@
 <div class="container">
   <h1 class="portfolio-title text-center">Big Rocket Portfolio</h1>
+  
   <div class="row">
     <% @portfolios.each do |portfolio| %>
-      <div class="col-xs-12 col-sm-4 portfolio-container">
-        <%= link_to image_tag( portfolio.screenshot.thumb, alt: `#{portfolio.title} screenshot`, class: "img-responsive center-block"), portfolio %>
-        <h5 class="text-center"><%= portfolio.title %></h5>
-        <p> <%= portfolio.description %></p>
+      <div class="col-xs-12 col-sm-4">
+        <div class="portfolio-container">
+          <%= link_to image_tag( portfolio.screenshot.thumb, alt: `#{portfolio.title} screenshot`, class: "img-responsive center-block"), portfolio %>
+          <h5 class="text-center"><%= portfolio.title %></h5>
+          <p> <%= portfolio.description %></p>
+        </div>
       </div>
     <% end %>
   </div>
+  
 </div>
