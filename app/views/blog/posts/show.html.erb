@@ -17,6 +17,6 @@
     <div class="error-alert"><%= flash[:alert] %> </div>
   <% end %>
   <%= render "blog/comments/addCommentForm" %>
-  <div id="comments">
+  <div id="comments" data-post-slug="<%= @post.slug %>">
     <%= render partial: "blog/comments/comment", collection: @post.comments, as: :comment %>
   </div>
