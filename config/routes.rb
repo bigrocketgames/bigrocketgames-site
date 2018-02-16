@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   namespace :blog do
     root 'posts#index', as: 'home'
     resources :posts, only: [:index, :show]
+    resources :comments, only: [:create]
   end
 
   namespace :admin do
