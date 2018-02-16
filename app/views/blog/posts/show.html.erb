@@ -10,3 +10,13 @@
 
     <hr />
   </div>
+
+  <h2 class="text-center red-text">Comments:</h2>
+  <hr />
+  <% if flash[:alert] %>
+    <div class="error-alert"><%= flash[:alert] %> </div>
+  <% end %>
+  <%= render "blog/comments/addCommentForm" %>
+  <div id="comments">
+    <%= render partial: "blog/comments/comment", collection: @post.comments, as: :comment %>
+  </div>
