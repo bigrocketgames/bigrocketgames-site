@@ -13,10 +13,13 @@
 
   <h2 class="text-center red-text">Comments:</h2>
   <hr />
-  <% if flash[:alert] %>
-    <div class="error-alert"><%= flash[:alert] %> </div>
-  <% end %>
-  <%= render "blog/comments/addCommentForm" %>
-  <div id="comments" data-post-slug="<%= @post.slug %>">
-    <%= render partial: "blog/comments/comment", collection: @post.comments, as: :comment %>
+
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+    <% if flash[:alert] %>
+      <div class="error-alert"><%= flash[:alert] %> </div>
+    <% end %>
+    <%= render "blog/comments/addCommentForm" %>
+    <div id="comments" data-post-slug="<%= @post.slug %>">
+      <%= render partial: "blog/comments/comment", collection: @post.comments.order("created_at DESC"), as: :comment %>
+    </div>
   </div>
