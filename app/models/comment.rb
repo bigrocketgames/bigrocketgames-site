@@ -4,5 +4,5 @@ class Comment < ApplicationRecord
   validates :post_id, :body, presence: true
   validates :body, uniqueness: true
 
-  after_create_commit { CommentBroadcastJob.perform_later(self) }
+  # after_create_commit { CommentBroadcastJob.perform_later(self) }
 end
