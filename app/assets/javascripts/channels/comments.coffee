@@ -9,4 +9,4 @@ jQuery(document).on 'turbolinks:load', ->
     disconnected: ->
 
     received: (data) ->
-      comments.prepend(data)
+      comments.prepend(data['comment'])
