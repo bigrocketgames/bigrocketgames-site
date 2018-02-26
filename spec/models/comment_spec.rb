@@ -15,11 +15,9 @@ RSpec.describe Comment, type: :model do
       expect(comment.valid?).to eq(true)
       expect(comment1.valid?).to eq(false)
       expect(comment1.errors.full_messages).to eq([
-        "User must exist",
         "Post must exist",
         "Post can't be blank",
-        "Body can't be blank",
-        "User can't be blank"
+        "Body can't be blank"
       ])
     end
   end
