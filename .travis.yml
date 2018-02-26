@@ -8,7 +8,8 @@ services:
 addons:
   postgresql: '9.6'
 before_script:
-- psql -c 'create database bigRocketGames_test;' -U postgres
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database travis_ci_test;' -U postgres
 env:
   global:
   - secure: rDcvdOE8Nkv9ptr+xJAauLS18+74/TqrMOAm63m64jBb/cl9UdnRqDAur/qiZ8H7XmmsnZ2TU98dw9e3wc6fDRCbkhmGDWC0hE91Q4LMA77hwqdqLMXNZRn4H1doITDzpX2LhRbsfaSyXrDAcDZaQ1MBr0EDaQOY4R+M0a7TUt966jzKJLdd/tpDeyX9jKUOCY46sNcwohC6QOiSqnkgpdv3e/jnPaO61GYds43PkHatQv2rEOEsevDGJbFydrAO5v+6C67d1dTigvbLSHsC8N4IKvddz7Lur4hKA9lZDxkglVdbMlHaM1qWgJHJq+XH9H0aybVXdJqB3YDulZMdy7jbNhsvf2o306k/lXjr3veJLFpR/+oZQDLXI4aFcyS9KdJ78irm3kpp6Pd4k9PabP5oM829H/sGe4YUF/ajMOfiqqL27ItdNDisvLDnD0gbjPgLYOzuzRXPmze4hSyZUbWKQYRnin/9+X3KptBUtFUvMNLsBZZLzZ7TbMTQb1gEyzva7q8J+y8d71TsD1V8VA7Uk/0PgCaNBXo3CSU0srqKwOkcYexmcqXPJEqCTZaLohHbQWSaMto4yHZFA3rQoQwQEsCAM+b/M/2fopkpK3lDstgqPhHa+EXymSnYviue5SgGQr8fsvXohfC9IFHjrMHQsddfDUBPI2VqJpGxk8I=
