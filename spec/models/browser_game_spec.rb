@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe BrowserGame, type: :model do
   describe 'validations' do
     it 'requires a title, description, and instructions' do
-      bGame = build(:browser_game, title: nil, description: nil, instructions: nil)
+      bGame = build(:browser_game, title: "", description: nil, instructions: nil)
 
       expect(bGame.valid?).to eq(false)
       expect(bGame.errors.full_messages).to eq([
