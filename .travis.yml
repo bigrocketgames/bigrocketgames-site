@@ -1,13 +1,14 @@
 language: ruby
 rvm:
-  - 2.5
-
-services: 
-  - postgresql
-  - redis-server
-
+- 2.5
+services:
+- postgresql
+- redis-server
 addons:
-  postgresql: "9.6"
-
+  postgresql: '9.6'
 before_script:
-  - psql -c 'create database bigRocketGames_test;' -U postgres
+- psql -c 'create database bigRocketGames_test;' -U postgres
+env:
+  global:
+  - secure: rDcvdOE8Nkv9ptr+xJAauLS18+74/TqrMOAm63m64jBb/cl9UdnRqDAur/qiZ8H7XmmsnZ2TU98dw9e3wc6fDRCbkhmGDWC0hE91Q4LMA77hwqdqLMXNZRn4H1doITDzpX2LhRbsfaSyXrDAcDZaQ1MBr0EDaQOY4R+M0a7TUt966jzKJLdd/tpDeyX9jKUOCY46sNcwohC6QOiSqnkgpdv3e/jnPaO61GYds43PkHatQv2rEOEsevDGJbFydrAO5v+6C67d1dTigvbLSHsC8N4IKvddz7Lur4hKA9lZDxkglVdbMlHaM1qWgJHJq+XH9H0aybVXdJqB3YDulZMdy7jbNhsvf2o306k/lXjr3veJLFpR/+oZQDLXI4aFcyS9KdJ78irm3kpp6Pd4k9PabP5oM829H/sGe4YUF/ajMOfiqqL27ItdNDisvLDnD0gbjPgLYOzuzRXPmze4hSyZUbWKQYRnin/9+X3KptBUtFUvMNLsBZZLzZ7TbMTQb1gEyzva7q8J+y8d71TsD1V8VA7Uk/0PgCaNBXo3CSU0srqKwOkcYexmcqXPJEqCTZaLohHbQWSaMto4yHZFA3rQoQwQEsCAM+b/M/2fopkpK3lDstgqPhHa+EXymSnYviue5SgGQr8fsvXohfC9IFHjrMHQsddfDUBPI2VqJpGxk8I=
+  - secure: KZz5w2tVd1bBdVOL/hAZSt3Ng/OCJE9mG+A05k/LYOhEfCYPUedVIGnXMve4+xVWyriN3M//ijgGjL8m54f4bQ0uXZzdm5RX8cbkNrdr2CPTQgCVx0UtS8S66jR3lQPpVVHSh3ai2PSEQYe3+pR9BM1k3/chSbVV609riCPWVeph9x3H9OmmBBRHeI/3lBEVo6DoQOpRKXXLyGQ1xI/e47HjFxje7h7gUuW7ESpyDq1K9Gy/xtZXLk3ydZWuYffCI6osTs5gFjS6uGbgX+dp0jTUwBMWCoqEk7mmvgNzt6NovIsSkTwZHNLyqDzZEEjiljW8f7BVJrV6RgUviidQgo7tSSOn8WD+PpFp1doit1c8GplZR0aGIvJ2Q6IFF6JZpQOZP3Hd8bSIh8qm4ElkT8ty8IYNBaj3/yz/nXbPcAPosPSxID/Eh7M00mWzaEBrX9BxYXwrjMWixuSLFXgX5Sg5GJ99WxxiJJiWPpzQUMjddahTlyXy90DcipywvjcjaPmiIx8AUZKMagGbLQCtSsrF3PnR8fe+Qc0GsZDEQPfv+yafF580PHLqLUniv4pisuogSf/28T9XMkWWUghifqLH6Vw/y/88WQXgPxAQbthIUJcAmL78txWLgilAX86otF6jdVm773loSCNqad8CSJuTSfV5xx9/km8MoeTgrDI=
