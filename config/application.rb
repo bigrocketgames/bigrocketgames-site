@@ -29,3 +29,8 @@ module BigRocketGames
     config.generators.system_tests = nil
   end
 end
+
+Raven.configure do |config|
+  config.dsn = ENV['SENTRY_DSN']
+  config.environments = %w[ production ]
+end

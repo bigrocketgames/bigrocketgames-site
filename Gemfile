@@ -21,6 +21,9 @@ gem 'bootstrap-sass'
 # Use devise for registration and logins
 gem 'devise'
 
+# Use sentry-raven for auto-error tracking
+gem 'sentry-raven'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
