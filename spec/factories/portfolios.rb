@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :portfolio do
-    title "MyString"
-    description "MyText"
-    features "MyText"
+    title "Title"
+    description "The description of the item"
+    features "Feature 1"
   end
 end
