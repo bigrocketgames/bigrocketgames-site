@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   has_many :comments
 
   validates :title, uniqueness: true
-  validates :title, :body, :user_id, :status, presence: true
+  validates :title, :body, :user_id, :status, :intro, :slug, presence: true
 
   before_validation do
     if !self.title.nil? && self.slug != self.title.downcase.gsub(" ", "-")
@@ -17,5 +17,10 @@ class Post < ApplicationRecord
       self.title = self.title.strip()
       self.slug = self.title.downcase.gsub(" ", "-")
     end
+
+    if !self.title.nil?
+      self.intro = self.body.split("</p>")[0] + "</p>"
+    end
   end
+
 end
