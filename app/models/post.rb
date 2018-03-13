@@ -19,7 +19,7 @@ class Post < ApplicationRecord
     end
 
     if !self.title.nil?
-      self.intro = self.body.split("</p>")[0] + "</p>"
+      self.intro = self.body.split("</p>")[0].delete_prefix("<p>") + ".."
     end
   end
 
