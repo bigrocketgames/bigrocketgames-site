@@ -17,10 +17,10 @@ RSpec.describe "Posts", Type: :feature do
       visit 'blog/posts'
       
       expect(page).to have_content @post.title
-      expect(page).to have_content @post.body
+      expect(page).to have_content @post.intro
       expect(page). to have_content @post.comments.length
       expect(page).to have_content @post1.title
-      expect(page).to have_content @post1.body
+      expect(page).to have_content @post1.intro
       expect(page).to have_content @post1.comments.length
     end
   end
