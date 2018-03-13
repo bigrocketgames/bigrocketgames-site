@@ -9,7 +9,7 @@ RSpec.describe Post, type: :model do
   describe 'validations' do
     it 'requires a title, body, and user_id' do
       post = create(:post, user_id: @user.id)
-      post1 = build(:post, title: nil, body: nil, user_id: nil)
+      post1 = build(:post, title: nil, body: nil, status: nil, user_id: nil)
 
       expect(post.valid?).to eq(true)
       expect(post1.valid?).to eq(false)
@@ -17,7 +17,10 @@ RSpec.describe Post, type: :model do
         "User must exist",
         "Title can't be blank",
         "Body can't be blank",
-        "User can't be blank"
+        "User can't be blank",
+        "Status can't be blank",
+        "Intro can't be blank",
+        "Slug can't be blank"
       ])
     end
 
@@ -31,6 +34,7 @@ RSpec.describe Post, type: :model do
         "Title has already been taken"
       ])
     end
+
   end
 
   describe 'relationships' do
@@ -49,6 +53,12 @@ RSpec.describe Post, type: :model do
       
       expect(post.title).to eq("Title of a post")
       expect(post.slug).to eq("title-of-a-post")
+    end
+
+    it 'creates the intro paragraph' do
+      post = create(:post, user_id: @user.id)
+
+      expect(post.intro).to_not eq(nil)
     end
   end
 end
