@@ -18,9 +18,8 @@ class Post < ApplicationRecord
       self.slug = self.title.downcase.gsub(" ", "-")
     end
 
-    if !self.title.nil?
-      self.intro = self.body.split("</p>")[0].delete_prefix("<p>") + ".."
-    end
+    
+    self.intro = self.body.split("</p>")[0].delete_prefix("<p>") + ".." if !self.title.nil?
   end
 
 end
