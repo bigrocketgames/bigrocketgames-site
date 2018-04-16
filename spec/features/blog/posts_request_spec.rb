@@ -14,11 +14,11 @@ RSpec.describe "Posts", Type: :feature do
   describe "GET blog/posts" do
 
     it "shows all posts on the page" do
-      visit 'blog/posts'
+      visit 'blog'
       
       expect(page).to have_content @post.title
       expect(page).to have_content @post.intro
-      expect(page). to have_content @post.comments.length
+      expect(page).to have_content @post.comments.length
       expect(page).to have_content @post1.title
       expect(page).to have_content @post1.intro
       expect(page).to have_content @post1.comments.length
