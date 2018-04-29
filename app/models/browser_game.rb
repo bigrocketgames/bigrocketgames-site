@@ -1,5 +1,5 @@
 class BrowserGame < ApplicationRecord
-  enum :status [ :draft, :published ]
+  enum status: [ :draft, :published ]
   mount_uploader :screenshot, ScreenshotsUploader
   
   validates :title, uniqueness: true
