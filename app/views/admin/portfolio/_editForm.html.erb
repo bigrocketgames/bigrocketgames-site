@@ -27,10 +27,6 @@
   </div>
 
   <div class="form-group">
-    <%= f.input :status, collection: Portfolio.statuses.keys, class: "status-select" %>
-  </div>
-
-  <div class="form-group">
     <%= f.input :siteLink, class: "form-control" %>
   </div>
 
@@ -40,6 +36,10 @@
 
   <div class="form-group">
     <%= f.input :screenshot, as: 'file', class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :status, collection: Portfolio.statuses.keys, class: "status-select" %>
   </div>
 
   <div class="form-group">
