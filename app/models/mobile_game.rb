@@ -1,4 +1,5 @@
 class MobileGame < ApplicationRecord
+  enum :status [ :draft, :published ]
   mount_uploaders :sliderImages, ImageUploader
 
   validates :title, uniqueness: true
