@@ -32,6 +32,10 @@
   </div>
 
   <div class="form-group">
+    <%= f.input :status, collection: MobileGame.statuses.keys, class: "status-select" %>
+  </div>
+
+  <div class="form-group">
     <%= f.button :submit %>
   </div>
 

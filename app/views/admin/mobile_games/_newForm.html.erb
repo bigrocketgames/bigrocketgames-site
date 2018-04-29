@@ -2,7 +2,7 @@
   <% if @mobileGame.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= "#{pluralize(@mobileGame.errors.count, "error")} prohibited this post from being save:" %>
+        <%= "#{pluralize(@mobileGame.errors.count, "error")} prohibited this post from being saved:" %>
       </h2>
       <ul>
         <% @mobileGame.errors.full_messages.each do |msg| %>
@@ -29,6 +29,10 @@
 
   <div class="form-group">
     <%= f.input :sliderImages, as: 'file', class: "form-control", input_html: { multiple: true } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :status, collection: MobileGame.statuses.keys, class: "status-select" %>
   </div>
 
   <div class="form-group">
