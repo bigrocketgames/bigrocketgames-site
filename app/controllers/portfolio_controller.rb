@@ -1,7 +1,7 @@
 class PortfolioController < ApplicationController
 
   def index
-    @portfolios = Portfolio.all.order(:title)
+    @portfolios = Portfolio.published.order(:title)
   end
 
   def show
