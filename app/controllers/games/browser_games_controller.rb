@@ -2,7 +2,7 @@ class Games::BrowserGamesController < ApplicationController
   layout "browserGame", only: [:show]
 
   def index
-    @browserGames = BrowserGame.all.order(:title)
+    @browserGames = BrowserGame.published.order(:title)
   end
   
   def show
