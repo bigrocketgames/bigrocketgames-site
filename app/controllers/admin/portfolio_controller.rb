@@ -67,7 +67,7 @@ class Admin::PortfolioController < ApplicationController
   end
 
   def portfolio_params
-    params.require(:portfolio).permit(:title, :description, :features, :screenshot, :siteLink, :sourceCodeLink)
+    params.require(:portfolio).permit(:title, :description, :features, :screenshot, :siteLink, :sourceCodeLink, :status)
   end
 
 end
