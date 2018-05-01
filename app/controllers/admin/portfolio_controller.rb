@@ -5,7 +5,7 @@ class Admin::PortfolioController < ApplicationController
   before_action :get_portfolio, only: [:edit, :update, :destroy]
 
   def index
-    @portfolios = Portfolio.all
+    @portfolios = Portfolio.all.order(:id)
   end
 
   def new
