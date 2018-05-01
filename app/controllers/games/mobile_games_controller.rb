@@ -1,7 +1,7 @@
 class Games::MobileGamesController < ApplicationController
 
   def index
-    @mobileGames = MobileGame.all.order(:title)
+    @mobileGames = MobileGame.published.order(:title)
   end
 
   def show
