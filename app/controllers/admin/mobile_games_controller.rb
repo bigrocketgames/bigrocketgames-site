@@ -67,7 +67,7 @@ class Admin::MobileGamesController < ApplicationController
   end
 
   def mobileGamesParams
-    params.require(:mobile_game).permit(:title, :description, :gameFeatures, {sliderImages: []})
+    params.require(:mobile_game).permit(:title, :description, :gameFeatures, :status, {sliderImages: []})
   end
 
 end
