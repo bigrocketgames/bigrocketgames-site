@@ -1,0 +1,42 @@
+$primary-red: #dc143c;
+$black-text: #000;
+$admin-header-text-color: #81fff9;
+
+.voter-tools-container {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.voter-tool-box {
+  height: 200px;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.voter-tools-headline {
+  font-size: 1.25em;
+  margin-bottom: 0;
+}
+
+.voter-tools-button {
+  height: 60px;
+  max-width: 300px;
+  width: 100%;
+  padding: 20px;
+  background-color: #ff4a4a;
+  display: block;
+  margin: 35px auto 0;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.voter-tools-button:hover {
+  background-color: $primary-red;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
