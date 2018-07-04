@@ -11,6 +11,8 @@ document.addEventListener("turbolinks:load", function() {
     $('.portfolio-link').addClass('active');
   } else if (path.search("blog") > -1) {
     $('.blog-link').addClass('active');
+  } else if (path.search("voter_tools") > -1) {
+    $('.voter-tools-link').addClass('active');
   } else if (path.search("_games") > -1) {
     $('.games-link').addClass('active');
     findGame(path);
