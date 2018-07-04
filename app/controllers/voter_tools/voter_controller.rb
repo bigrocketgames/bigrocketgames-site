@@ -1,4 +1,7 @@
-class VoterController < ApplicationController
+class VoterTools::VoterController < ApplicationController
+
+  def home
+  end
 
   def registration
   end

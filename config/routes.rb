@@ -33,9 +33,12 @@ Rails.application.routes.draw do
   resources :portfolio, only: [:index, :show]
 
   # Voter registration tool pages
-  get 'voter-registration', to: 'voter#registration'
-  get 'absentee_ballot', to: 'voter#absentee'
-  get 'voter-registration-status', to: 'voter#status'
-  get 'election-reminder-tools', to: 'voter#reminders'
+  namespace :voter_tools do
+    root 'voter_tools#home', as: 'home'
+    get 'voter-registration', to: 'voter#registration'
+    get 'absentee-ballot', to: 'voter#absentee'
+    get 'voter-registration-status', to: 'voter#status'
+    get 'election-reminder-tools', to: 'voter#reminders'
+  end
   
 end
