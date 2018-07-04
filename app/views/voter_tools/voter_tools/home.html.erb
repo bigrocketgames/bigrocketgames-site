@@ -1,1 +1,30 @@
-<h3>This is the voter tools homepage.</h3>
+<div class="container voter-tools-container">
+  <h3 class="text-center">Here at Big Rocket Games, we care deeply about our democracy and lending a hand where we can.</h3>
+  <h3 class="text-center">Here are some voter tools to use.  They are provided free by <a href="https://www.vote.org/" target="blank">Vote.org</a>.</h3>
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-1 voter-tool-box">
+      <p class="text-center voter-tools-headline">Do you need to register to vote?</p>
+      <p class="text-center voter-tools-headline">It is quick.</p>
+      <%= link_to 'Register to Vote', voter_tools_voter_registration_path, class: "voter-tools-button" %>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-sm-offset-2 voter-tool-box">
+      <p class="text-center voter-tools-headline">Not sure if you registered already?</p>
+      <p class="text-center voter-tools-headline">There is a tool for that.</p>
+      <%= link_to 'Check Your Registration Status', voter_tools_voter_registration_status_path, class: "voter-tools-button" %>
+    </div>
+  </div> 
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-1 voter-tool-box">
+      <p class="text-center voter-tools-headline">Can't get to the polls this year?</p>
+      <p class="text-center voter-tools-headline">Go absentee.</p>
+      <%= link_to 'Request Absentee Ballot', voter_tools_absentee_ballot_path, class: "voter-tools-button" %>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-sm-offset-2 voter-tool-box">
+      <p class="text-center voter-tools-headline">Don't miss out on any election dates ever again.</p>
+      <%= link_to 'Sign Up For Election Reminders', voter_tools_election_reminder_tools_path, class: "voter-tools-button" %>
+    </div>
+  </div>
+
+
+</div>
